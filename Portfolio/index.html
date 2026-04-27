@@ -1,18 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jasrunisha K Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasrunisha Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:#020617;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav h2{
+  color:#38bdf8;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+  padding:20px;
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.hero span{
+  color:#38bdf8;
+}
+
+.hero p{
+  margin:15px 0;
+  font-size:18px;
+}
+
+.btn{
+  background:#38bdf8;
+  padding:12px 25px;
+  border-radius:25px;
+  text-decoration:none;
+  color:black;
+  margin:10px;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+.btn-outline{
+  border:2px solid white;
+  padding:12px 25px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+  margin:10px;
+}
+
+/* SECTION TITLE */
+.title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:30px;
+}
+
+/* SKILLS */
+.skills{
+  padding:60px 20px;
+}
+
+.skill{
+  margin:20px auto;
+  max-width:500px;
+}
+
+.bar{
+  height:10px;
+  background:#1e293b;
+  border-radius:10px;
+}
+
+.bar div{
+  height:10px;
+  background:#38bdf8;
+  border-radius:10px;
+}
+
+/* PROJECTS */
+.projects{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#1e293b;
+  padding:25px;
+  width:260px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  background:#334155;
+}
+
+/* CONTACT */
+.contact{
+  padding:60px 20px;
+  text-align:center;
+  background:#020617;
+}
+
+.contact p{
+  margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:black;
+  font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 <nav>
   <h2>JK</h2>
   <ul>
-    <li><a href="#home">Home</a></li>
+    <li><a href="#">Home</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -20,22 +190,18 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-text">
+<section class="hero">
+  <div>
     <h1>Hello, I'm <span>Jasrunisha K</span></h1>
-    <h2 class="typing"></h2>
-    <p>Passionate Computer Science Engineer building real-world applications.</p>
-
-    <div class="buttons">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#" class="btn-outline">Download Resume</a>
-    </div>
+    <p>Passionate Computer Science Engineer building real-world applications 🚀</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="#" class="btn-outline">Download Resume</a>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="skills">
-  <h2>Technical Skills</h2>
+<section class="skills" id="skills">
+  <h2 class="title">Technical Skills</h2>
 
   <div class="skill">
     <p>HTML / CSS</p>
@@ -49,22 +215,20 @@
 
   <div class="skill">
     <p>Java</p>
-    <div class="bar"><div style="width:80%"></div></div>
+    <div class="bar"><div style="width:75%"></div></div>
   </div>
 
   <div class="skill">
     <p>PHP & MySQL</p>
     <div class="bar"><div style="width:85%"></div></div>
   </div>
-
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="projects">
-  <h2>Projects</h2>
+<section class="projects" id="projects">
+  <h2 class="title">Projects</h2>
 
   <div class="cards">
-
     <div class="card">
       <h3>Feedback Portal</h3>
       <p>QR based E-commerce feedback system using PHP & MySQL.</p>
@@ -79,22 +243,21 @@
       <h3>Hospital Finder</h3>
       <p>Location-based system to detect nearest hospitals.</p>
     </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
+<section class="contact" id="contact">
+  <h2 class="title">Contact Me</h2>
   <p>📞 +91 93450 77056</p>
   <p>📧 jasrunisha20@gmail.com</p>
   <p>📍 Tirupur, Tamil Nadu</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Jasrunisha K | Made with ❤️</p>
+  © 2026 Jasrunisha K | Made with ❤️
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
